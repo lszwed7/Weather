@@ -1,0 +1,63 @@
+@import '../../Variables/variables.scss';
+.wrapper{
+    display: flex;
+    position: relative;
+    width:100%;
+    height:40%;
+    .btn_search{
+        background: inherit;
+        border:none;
+        color: $main-color;
+        margin:10px;
+    }
+    .label{
+        display: block;
+        position: absolute;
+        transform:translateX(-25%);
+        top:10px;
+        left:50%;
+        font-size: 18px;
+        color:#ffffff;
+        transition: opacity .4s;
+    }
+    .input{
+        width:70%;
+        background: inherit;
+        border:none;
+        border-bottom:1px solid $second-color;
+        font-size: 30px;
+        margin:auto;
+        text-align: center;
+
+        &:focus+.label{
+            opacity:0;
+            transition: opacity .3s;
+        }
+        &:valid+.label{
+            opacity:0;
+            transition: opacity .3s;
+        }
+
+    }
+    .input:focus{
+        outline: none;
+    }
+    .input:valid{
+        color:#ffffff;
+        background:inherit;
+    }
+}
+@media (min-width:700px){
+    .wrapper{
+        .label{
+            transform:translateX(-50%);
+        }
+        .btn_search{
+            position: absolute;
+            left:25%;
+        }
+        .input{
+            width:35%;
+        }
+    }
+}

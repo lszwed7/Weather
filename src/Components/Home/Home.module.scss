@@ -1,0 +1,22 @@
+.wrapper{
+    position: relative;
+    height:100vh;
+}
+.clock{
+    position:absolute;
+    transform: translateX(-50%);
+    top:40%;
+    left:50%;
+    font-size: 65px;
+    color:#ffffff;
+}
+
+@media (min-width:700px){
+    .wrapper{
+        width:100%;
+        .clock{
+            top:40%;
+            font-size: 100px;
+        }
+    }
+}

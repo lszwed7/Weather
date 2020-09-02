@@ -1,0 +1,69 @@
+@import '../../Mixins/Mixins.scss';
+@import '../../Variables/variables.scss';
+.wrapper{
+    height:25%;
+    width:20%;
+    .btn_hamb{
+        position: absolute;
+        top:0;
+        right:0px;
+        border:none;
+        background-color: inherit;
+        width:50px;
+        height:40px;
+        margin:5px 0px;
+        cursor: pointer;
+        .btn_hamb_line1{
+            @include btnHamb(5px,10px);
+            transition: all .4s ease-in-out;
+        }
+        .clicked_first{
+            top:15px;
+            transform: rotate(-45deg);
+        
+        }
+        .btn_hamb_line2{
+            @include btnHamb(15px,10px);
+            transition: all .4s ease-in-out;
+        }
+        .clicked_second{
+            opacity:0
+        }
+        .btn_hamb_line3{
+            @include btnHamb(25px,10px);
+            transition: all .4s ease-in-out;
+        }
+        .clicked_third{
+            top:15px;
+            transform:rotate(45deg)
+        }
+    }
+    .list{
+        position:absolute;
+        top:50px;
+        right: 0px;
+        display: flex;
+        width:100%;
+        background-color: $second-color;
+        list-style: none;
+        opacity:0;
+        transition: opacity .4s ease-in-out;
+        .item{
+            width:33%;
+            padding:10px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color:#ffffff;
+            }
+            .active{
+                font-weight: bold;
+                border-bottom: 2px solid #ffffff;
+            }
+        }
+    }
+    .list_open{
+        opacity:1;
+    }
+}
+

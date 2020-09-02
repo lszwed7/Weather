@@ -1,0 +1,26 @@
+@import '../../Variables/variables.scss';
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    color:#ffffff;
+    .date{
+        font-size: 17px;
+    }
+    .list{
+        padding:10px;
+        list-style: none;
+        li{
+            border-left:1px solid $second-color;
+        }
+    }
+}
+
+@media (min-width:700px){
+    .wrapper{
+        display: block;
+        padding:20px;
+        ul{
+            padding:0px
+        }
+    }
+}

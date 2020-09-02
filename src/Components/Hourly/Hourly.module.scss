@@ -1,0 +1,27 @@
+@import '../../Variables/variables.scss';
+
+.wrapper{
+    padding-top:$top-padding-component;
+    // height:250px
+}
+
+@media (min-width:700px){
+    .wrapper{
+        overflow:auto;
+        width:70%;
+        margin: 0px auto;
+        padding:0;
+        .list{
+            display: flex;
+        }
+    }
+    .wrapper::-webkit-scrollbar{
+        width:10px;
+        height:10px;
+    }
+    .wrapper::-webkit-scrollbar-thumb {
+        background: $second-color;
+        border-radius: 10px;
+      }
+      
+}

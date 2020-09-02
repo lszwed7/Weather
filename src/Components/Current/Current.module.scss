@@ -1,0 +1,80 @@
+@import '../../Variables/variables.scss';
+.wrapper{
+    max-height: 700px;
+    padding:$top-padding-component 10px;
+    color:#ffffff;
+    header{
+        
+        .city{
+            font-size: 50px;
+            word-break: break-all;
+        }
+    }
+    .main_parameters{
+        display: block;
+        .temp{
+            font-size: 75px;
+            margin-top:30px;
+        }
+    }
+    .param_list{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+        list-style: none;
+        .param{
+            border-right: 1px solid $second-color;
+            text-align: center;
+        }
+        .param:last-of-type{
+            border:none;
+        }
+    }  
+}
+@media (max-width:700px) and (orientation:landscape){
+    .wrapper{
+        display: flex;
+        padding:75px 30px;
+        height: 100vh;
+        .main_parameters{
+
+            .temp{
+                font-size: 50px;
+            }
+        }
+        .param_list{
+            flex-direction: column;
+            margin:0px;
+        }
+    }
+}
+@media (min-width:700px){
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        width:40%;
+        .header{
+            width:100%;
+            padding:0px 20px;
+            .city{
+                font-size: 7vw;
+            }
+        }
+        .main_parameters{
+            padding:20px;
+        }
+        .param_list{
+        flex-direction: column;
+        justify-content: start;
+        margin:0;
+            .param{
+                padding:15px 10px;
+                border:none;
+            }
+        }
+
+    }
+
+}
+
+

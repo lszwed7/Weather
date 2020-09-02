@@ -1,0 +1,9 @@
+@import '../../Variables/variables.scss';
+@mixin btnHamb($t-value,$r-value){
+    position:absolute;
+    top:$t-value;
+    right:$r-value;
+    width:30px;
+    height:5px;
+    background-color: $main-color;
+}
